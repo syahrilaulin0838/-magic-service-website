@@ -6,6 +6,21 @@ document.addEventListener('DOMContentLoaded', () => {
         once: true,    // Animasi hanya berjalan sekali saat scroll
         offset: 50,    // Memicu animasi sedikit lebih awal
     });
+    // Memfungsikan tombol play di video promo
+const playOverlay = document.querySelector('.play-overlay');
+const video = document.querySelector('#video-promo video');
+
+if (playOverlay && video) {
+    playOverlay.addEventListener('click', () => {
+        video.play();
+        playOverlay.style.display = 'none'; // Sembunyikan tombol play
+    });
+
+    // Opsional: tampilkan kembali overlay saat video selesai
+    video.addEventListener('ended', () => {
+        playOverlay.style.display = 'flex';
+    });
+}
 
     // 1. Menu Navigasi Mobile (Hamburger)
     const hamburger = document.getElementById('hamburger-menu');

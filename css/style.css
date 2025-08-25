@@ -508,3 +508,100 @@ footer {
         font-size: 0.9rem;
     }
 } 
+/* GAYA UNTUK IKON PLAY DI TENGAH VIDEO */
+
+/* 1. Mengatur section pembungkus agar rapi */
+#video-promo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 2. Membuat pembungkus untuk video dan tombol play */
+.video-wrapper {
+    position: relative; /* Ini wajib agar tombol play bisa menempel di atasnya */
+    display: inline-block; /* Menyesuaikan ukuran dengan video di dalamnya */
+    width: 540px; /* Samakan dengan max-width video Anda */
+    max-width: 450px;
+}
+
+/* 3. Gaya untuk tombol play (overlay) */
+.play-overlay {
+    position: absolute; /* Membuatnya menempel di atas video */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Trik untuk membuatnya pas di tengah */
+    z-index: 1; /* Memastikan tombol ini di atas video */
+
+    background-color: rgba(0, 0, 0, 0.6); /* Latar belakang hitam transparan */
+    color: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Membuatnya menjadi lingkaran */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.2s ease-in-out;
+    transition: opacity 0.3s
+}
+
+
+/* 4. Efek saat mouse diarahkan ke tombol play */
+.play-overlay:hover {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1); /* Sedikit membesar saat disentuh mouse */
+}
+
+/* 5. Mengatur ikon play di dalam lingkaran */
+.play-overlay i {
+    font-size: 2em; /* Ukuran ikon play */
+    margin-left: 5px; /* Sedikit geser ke kanan agar pas di tengah lingkaran */
+}
+
+/* 6. Gaya untuk video itu sendiri */
+#video-promo video {
+    width: 100%; 
+    height: auto;
+    display: block;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     z-index: 0;
+}
+.play-overlay {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 1;
+background-color: var(--primary-color); 
+color: #fff;
+width: 70px;  
+height: 50px; 
+border-radius: 5px;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+opacity: 0.9;
+transition: all 0.3s ease-in-out;
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3)
+}
+
+.play-overlay:hover {
+opacity: 1;
+transform: translate(-50%, -50%) scale(1.03);
+}
+
+.play-overlay i {
+font-size: 2.5em;
+margin-right: 10px; /* Jika ingin menambahkan teks di samping ikon */
+}
+
+.play-overlay span {
+font-size: 1.1em;
+font-weight: bold;
+}
