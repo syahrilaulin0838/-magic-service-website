@@ -1,4 +1,4 @@
-git add ./* Properti Kustom (Variabel) */
+/* Properti Kustom (Variabel) */
 :root {
     --primary-color: #ff6600; /* Warna orange yang lebih menyala */
     --secondary-color: #cc5200; /* Warna orange yang lebih gelap untuk hover */
@@ -25,6 +25,7 @@ body {
     color: var(--text-color); /* Otomatis menggunakan teks warna putih */
     background-color: var(--dark-color); /* Mengganti background utama menjadi hitam */
     overflow-x: hidden; 
+    
 }
 
 .container {
@@ -47,7 +48,7 @@ body {
 .cta-button {
     display: inline-block;
     background-color: var(--primary-color);
-    color: #fff;
+    color: #ffffff;
     padding: 12px 25px;
     border-radius: 5px;
     text-decoration: none;
@@ -64,7 +65,7 @@ body {
 
 /* Header & Navigasi */
 header {
-    background-color: #df7701; /* <-- Warna putih */
+    background-color: #df7701;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     padding: 15px 0;
     position: fixed;
@@ -89,8 +90,8 @@ header .container {
     gap: 10px;
 }
 .logo img {
-    height: 40px; /* Atur tinggi gambar logo. Coba ubah nilainya! */
-    width: auto;  /* Lebar akan menyesuaikan otomatis */
+    height: 40px; 
+    width: auto;
 }
 
 .nav-links {
@@ -104,7 +105,7 @@ header .container {
 
 .nav-links a {
     text-decoration: none;
-    color: #000000; /* <-- Diubah menjadi hitam */
+    color: #000000;
     font-weight: 600;
     transition: color 0.3s ease;
 }
@@ -138,13 +139,12 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 40px; /* Jarak antara teks dan gambar */
+    gap: 40px;
 }
 
 .hero-text {
-    flex: 1; /* Teks mengambil ruang yang tersedia */
-    max-width: 550px; /* Batasi lebar teks */
-    /* Pastikan tidak ada background di sini */
+    flex: 1;
+    max-width: 550px;
 }
 
 #hero h1 {
@@ -160,44 +160,13 @@ header .container {
 .hero-image {
     flex: 1;
     text-align: center;
+    color: #e66605;
 }
 
 .hero-image img {
-    
     height: auto;
     border-radius: 10px;
     max-width: 350px;
-}
-
-/* Media Query untuk Mobile */
-@media (max-width: 768px) {
-    #hero {
-        padding: 80px 0;
-        min-height: auto;
-    }
-
-    .hero-content {
-        flex-direction: column; /* Ubah layout menjadi vertikal di mobile */
-        text-align: center;
-    }
-
-    .hero-text {
-        order: 2; /* Pindahkan teks ke bawah gambar di mobile */
-    }
-
-    .hero-image {
-        order: 1; /* Pindahkan gambar ke atas teks di mobile */
-        margin-bottom: 30px;
-    }
-
-    #hero h1 {
-        font-size: 2.2rem;
-    }
-}
-
-#hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
 }
 
 /* Layanan */
@@ -226,7 +195,7 @@ header .container {
     margin-bottom: 20px;
 }
 
-/* GAYA BARU: Tabel Harga */
+/* Tabel Harga */
 .price-table {
     width: 100%;
     max-width: 800px;
@@ -283,16 +252,15 @@ header .container {
 }
 
 .testimoni-card {
-    background-color: var(--dark-color); /* Perbaikan: Menggunakan warna gelap untuk card */
+    background-color: var(--dark-color);
     padding: 25px;
     border-left: 5px solid var(--primary-color);
     border-radius: 5px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
-/* Tambahkan kode ini di bawahnya */
 .testimoni-card p {
-    color: var(--primary-color); /* <-- Mengubah warna teks testimoni menjadi oranye */
+    color: var(--primary-color);
 }
 
 .testimoni-author {
@@ -324,7 +292,7 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: var(--primary-color); /* <-- Menambahkan warna oranye */
+    color: var(--primary-color);
 }
 
 .faq-question i {
@@ -346,23 +314,6 @@ header .container {
 }
 
 /* Kontak */
-.kontak-wrapper {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 40px;
-    align-items: start;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: var(--font-family);
-}
-
 .contact-info p {
     margin-bottom: 15px;
     display: flex;
@@ -374,25 +325,6 @@ header .container {
     color: var(--primary-color);
     width: 20px;
     text-align: center;
-}
-
-#form-message {
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    display: none; /* Default disembunyikan, diatur oleh JS */
-}
-
-#form-message.success {
-    background-color: #d4edda;
-    color: #155724;
-    display: block;
-}
-
-#form-message.error {
-    background-color: #f8d7da;
-    color: #721c24;
-    display: block;
 }
 
 /* Footer */
@@ -464,6 +396,57 @@ footer {
     display: none;
 }
 
+/* Video Promo */
+#video-promo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 540px;
+}
+
+.play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: var(--primary-color); 
+    color: #fff;
+    width: 70px;  
+    height: 50px; 
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3)
+}
+
+.play-overlay:hover {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.03);
+}
+
+.play-overlay i {
+    font-size: 2.5em;
+}
+
+#video-promo video {
+    width: 100%; 
+    height: auto;
+    display: block;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 0;
+}
+
 /* Desain Responsif */
 @media(max-width: 768px) {
     .section-title {
@@ -472,7 +455,7 @@ footer {
 
     .nav-links {
         position: fixed;
-        top: 75px; /* Sesuaikan dengan tinggi header Anda */
+        top: 75px;
         left: -100%;
         background-color: #fff;
         flex-direction: column;
@@ -495,113 +478,178 @@ footer {
         display: block;
     }
 
-    #hero h1 {
-        font-size: 2.2rem;
+    #hero {
+        padding: 80px 0;
+        min-height: auto;
     }
 
-    .kontak-wrapper {
-        grid-template-columns: 1fr;
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        order: 2;
+    }
+
+    .hero-image {
+        order: 1;
+        margin-bottom: 30px;
+    }
+
+    #hero h1 {
+        font-size: 2.2rem;
     }
 
     .price-table th, .price-table td {
         padding: 10px;
         font-size: 0.9rem;
     }
-} 
-/* GAYA UNTUK IKON PLAY DI TENGAH VIDEO */
+}
 
-/* 1. Mengatur section pembungkus agar rapi */
-#video-promo {
+@media (max-width: 480px) {
+  header .container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 15px;
+  }
+
+  .logo img {
+    height: 32px;
+  }
+
+  .logo span {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    top: 65px;
+  }
+
+  #hero {
+    padding: 60px 15px;
+    min-height: auto;
+  }
+
+  #hero h1 {
+    font-size: 1.6rem;
+  }
+
+  #hero p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+
+  .hero-image img {
+    max-width: 220px;
+  }
+
+  .price-table th, 
+  .price-table td {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  .contact-info p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  footer p {
+    font-size: 0.85rem;
+  }
+}
+
+/* --- Gaya untuk Bagian Brand --- */
+#brands {
+    background-color: var(--light-color); /* Memberi warna latar yang sedikit berbeda */
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.brands-grid {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center; /* Logo berada di tengah */
     align-items: center;
+    gap: 20px; /* Jarak antar logo */
 }
 
-/* 2. Membuat pembungkus untuk video dan tombol play */
-.video-wrapper {
-    position: relative; /* Ini wajib agar tombol play bisa menempel di atasnya */
-    display: inline-block; /* Menyesuaikan ukuran dengan video di dalamnya */
-    width: 540px; /* Samakan dengan max-width video Anda */
-    max-width: 450px;
+.brand-logo {
+    color: #cccccc;
+    font-size: 1.5rem; /* Ukuran font/logo */
+    font-weight: 600;
+    padding: 15px 25px;
+    background-color: var(--dark-color);
+    border-radius: 8px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-/* 3. Gaya untuk tombol play (overlay) */
-.play-overlay {
-    position: absolute; /* Membuatnya menempel di atas video */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Trik untuk membuatnya pas di tengah */
-    z-index: 1; /* Memastikan tombol ini di atas video */
+.brand-logo:hover {
+    color: var(--primary-color); /* Warna berubah saat disentuh mouse */
+    transform: translateY(-5px); /* Sedikit terangkat saat disentuh mouse */
+}
 
-    background-color: rgba(0, 0, 0, 0.6); /* Latar belakang hitam transparan */
-    color: white;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%; /* Membuatnya menjadi lingkaran */
-    
+/* Penyesuaian untuk layar mobile */
+@media (max-width: 768px) {
+    .brand-logo {
+        font-size: 1.1rem;
+        padding: 10px 15px;
+    }
+}
+
+/* --- Gaya untuk Bagian Proses Kerja --- */
+#proses-kerja {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.proses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.proses-langkah {
+    background-color: var(--light-color);
+    padding: 30px 20px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.proses-langkah i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.proses-langkah h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.proses-nomor {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background-color: var(--primary-color);
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    cursor: pointer;
-    opacity: 0.8;
-    transition: all 0.2s ease-in-out;
-    transition: opacity 0.3s
-}
-
-
-/* 4. Efek saat mouse diarahkan ke tombol play */
-.play-overlay:hover {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1.1); /* Sedikit membesar saat disentuh mouse */
-}
-
-/* 5. Mengatur ikon play di dalam lingkaran */
-.play-overlay i {
-    font-size: 2em; /* Ukuran ikon play */
-    margin-left: 5px; /* Sedikit geser ke kanan agar pas di tengah lingkaran */
-}
-
-/* 6. Gaya untuk video itu sendiri */
-#video-promo video {
-    width: 100%; 
-    height: auto;
-    display: block;
-    border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-     z-index: 0;
-}
-.play-overlay {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-z-index: 1;
-background-color: var(--primary-color); 
-color: #fff;
-width: 70px;  
-height: 50px; 
-border-radius: 5px;
-display: flex;
-justify-content: center;
-align-items: center;
-cursor: pointer;
-opacity: 0.9;
-transition: all 0.3s ease-in-out;
-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3)
-}
-
-.play-overlay:hover {
-opacity: 1;
-transform: translate(-50%, -50%) scale(1.03);
-}
-
-.play-overlay i {
-font-size: 2.5em;
-margin-right: 10px; /* Jika ingin menambahkan teks di samping ikon */
-}
-
-.play-overlay span {
-font-size: 1.1em;
-font-weight: bold;
+    font-size: 1.5rem;
+    font-weight: 700;
+    opacity: 0.2;
 }
