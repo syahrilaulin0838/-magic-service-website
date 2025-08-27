@@ -120,6 +120,7 @@ header .container {
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
+    color: #000000;
 }
 
 /* Hero */
@@ -160,6 +161,9 @@ header .container {
 .hero-image {
     flex: 1;
     text-align: center;
+}
+
+.hero-image h1 {
     color: #e66605;
 }
 
@@ -447,123 +451,6 @@ footer {
     z-index: 0;
 }
 
-/* Desain Responsif */
-@media(max-width: 768px) {
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .nav-links {
-        position: fixed;
-        top: 75px;
-        left: -100%;
-        background-color: #fff;
-        flex-direction: column;
-        width: 100%;
-        height: calc(100vh - 75px);
-        text-align: center;
-        transition: left 0.3s ease;
-        padding-top: 20px;
-    }
-    
-    .nav-links.active {
-        left: 0;
-    }
-
-    .nav-links li {
-        margin: 20px 0;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    #hero {
-        padding: 80px 0;
-        min-height: auto;
-    }
-
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-text {
-        order: 2;
-    }
-
-    .hero-image {
-        order: 1;
-        margin-bottom: 30px;
-    }
-
-    #hero h1 {
-        font-size: 2.2rem;
-    }
-
-    .price-table th, .price-table td {
-        padding: 10px;
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-  header .container {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px 15px;
-  }
-
-  .logo img {
-    height: 32px;
-  }
-
-  .logo span {
-    font-size: 1rem;
-  }
-
-  .nav-links {
-    top: 65px;
-  }
-
-  #hero {
-    padding: 60px 15px;
-    min-height: auto;
-  }
-
-  #hero h1 {
-    font-size: 1.6rem;
-  }
-
-  #hero p {
-    font-size: 1rem;
-  }
-
-  .cta-button {
-    font-size: 0.9rem;
-    padding: 10px 15px;
-  }
-
-  .hero-image img {
-    max-width: 220px;
-  }
-
-  .price-table th, 
-  .price-table td {
-    font-size: 0.85rem;
-    padding: 8px;
-  }
-
-  .contact-info p {
-    font-size: 0.9rem;
-    line-height: 1.4;
-  }
-
-  footer p {
-    font-size: 0.85rem;
-  }
-}
-
 /* --- Gaya untuk Bagian Brand --- */
 #brands {
     background-color: var(--light-color); /* Memberi warna latar yang sedikit berbeda */
@@ -595,14 +482,6 @@ footer {
 .brand-logo:hover {
     color: var(--primary-color); /* Warna berubah saat disentuh mouse */
     transform: translateY(-5px); /* Sedikit terangkat saat disentuh mouse */
-}
-
-/* Penyesuaian untuk layar mobile */
-@media (max-width: 768px) {
-    .brand-logo {
-        font-size: 1.1rem;
-        padding: 10px 15px;
-    }
 }
 
 /* --- Gaya untuk Bagian Proses Kerja --- */
@@ -652,4 +531,143 @@ footer {
     font-size: 1.5rem;
     font-weight: 700;
     opacity: 0.2;
+}
+
+/* ======================================= */
+/* MULAI DESAIN RESPONSIVE (MOBILE FRIENDLY) */
+/* ======================================= */
+
+/* Untuk Tablet dan HP layar besar (lebar maks 768px) */
+@media(max-width: 768px) {
+    .section {
+        padding: 40px 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 70px; /* Menyesuaikan dengan tinggi header */
+        left: -100%;
+        background-color: #fff;
+        flex-direction: column;
+        width: 100%;
+        height: calc(100vh - 70px);
+        text-align: center;
+        transition: left 0.3s ease;
+        padding-top: 20px;
+        z-index: 999;
+    }
+    
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    #hero {
+        padding: 100px 0 60px 0; /* Jarak atas ditambah agar tidak tertutup header */
+        min-height: auto;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        order: 2; /* Teks berada di bawah gambar */
+    }
+
+    .hero-image {
+        order: 1; /* Gambar berada di atas teks */
+        margin-bottom: 20px;
+    }
+
+    #hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .price-table th, .price-table td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .brand-logo {
+        font-size: 1.1rem;
+        padding: 10px 15px;
+    }
+}
+
+/* Untuk HP layar kecil (lebar maks 480px) */
+@media (max-width: 480px) {
+  header {
+    padding: 10px 0; /* Mengurangi tinggi header */
+  }
+
+  header .container {
+    padding: 0 15px;
+  }
+
+  .logo img {
+    height: 35px; /* Sedikit mengecilkan logo */
+  }
+
+  .logo span {
+    font-size: 1.2rem; /* Mengecilkan teks logo */
+  }
+
+  .nav-links {
+    top: 55px; /* Menyesuaikan posisi menu dengan header baru */
+    height: calc(100vh - 55px);
+  }
+
+  #hero {
+    padding: 80px 15px 40px 15px; /* Mengurangi padding hero section */
+  }
+
+  #hero h1 {
+    font-size: 1.8rem; /* Mengecilkan font judul utama */
+  }
+
+  #hero p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .hero-image img {
+    max-width: 180px; /* Mengecilkan gambar logo di hero */
+  }
+
+  .hero-image h1 {
+    font-size: 1.5rem; /* Mengecilkan teks "Magic Service" di bawah logo */
+    margin-top: 5px;
+  }
+
+  .price-table th, 
+  .price-table td {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  .contact-info p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  footer p {
+    font-size: 0.85rem;
+  }
 }
