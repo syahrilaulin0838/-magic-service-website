@@ -35,6 +35,7 @@ body {
     color: var(--text-color);
     background-color: var(--dark-color);
     width: 100%;
+    overflow-y: hidden; 
 }
 
 /* Container */
@@ -78,7 +79,7 @@ body {
 
 /* Header & Navigasi */
 header {
-    background-color: #000000;
+    background-color: var(--primary-color); /* kuning */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     padding: 15px 0;
     position: fixed;
@@ -87,7 +88,6 @@ header {
     z-index: 1000;
     overflow-x: hidden;
 }
-
 header .container {
     display: flex;
     justify-content: space-between;
@@ -97,7 +97,8 @@ header .container {
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #FFD700;
+    color: #000000; /* ganti hitam */
+
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -121,13 +122,14 @@ header .container {
 
 .nav-links a {
     text-decoration: none;
-    color: #e8d102;
+    color: #000000; /* hitam */
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
+
 .nav-links a:hover {
-    color: #ffffff;
+    color: #333333; /* abu gelap pas hover */
 }
 
 .hamburger {
@@ -136,7 +138,7 @@ header .container {
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: #FFD700;
+    color: #d9a700;
 }
 
 /* Hero */
@@ -755,4 +757,7 @@ footer {
   footer p {
     font-size: 0.85rem;
   }
+}
+p {
+    color: #ffffff !important;
 }
